@@ -1,0 +1,10 @@
+/* 480px 이하 */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  #contents {
+    padding: 0 10px;
+  }
+}

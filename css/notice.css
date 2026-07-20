@@ -1,0 +1,170 @@
+#wrap {
+    width: 100%;
+    height: 2700px;
+}
+/* main */
+#main {
+    width: 100%;
+    height: 500px;
+    background-color: #4B0090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main h3 {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 20px;
+}
+#main h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+/* contents */
+#contents {
+    width: 100%;
+    height: 1600px;
+    background-color: #fff;
+}
+.con_nav {
+    margin: 0 auto;
+    width: 1300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+.con_nav ul {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: center;    
+    border-bottom: 2px solid #B3B3B3;
+}
+.con_nav li {
+    width: 260px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+}
+.con_nav li a {
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #B3B3B3;
+}
+.con_nav li.on a {
+    color: #4B0090;
+}
+.con_nav li.on a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #4B0090;
+    border-radius: 50%;
+}
+.con_notice {
+    margin: 0 auto;
+    width: 1300px;
+    height: 1000px;
+}
+.con_notice .notice_table {
+    margin: 0 auto;
+    width: 1280px;
+    height: 935px;
+    border-collapse: collapse;
+}
+.notice_table thead {
+    background-color: #CBA1F2;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.notice_table .num {
+    width: 150px;
+}
+.notice_table .title {
+    width: auto;
+}
+.notice_table .writer {
+    width: 170px;
+}
+.notice_table .date {
+    width: 200px;
+}
+.notice_table tbody {
+    text-align: center;
+}
+.notice_table tbody tr {
+    border-bottom: 2px solid #B3B3B3;
+}
+.notice_table tbody td {
+    font-size: 20px;
+}
+.notice_table tbody td.subject {
+    text-align: left;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 100px;
+}
+.btn a {
+    text-decoration: none;
+    color: #222;
+    transition: 0.5s;
+}
+/* 페이지 번호 */
+.btn .page {
+    width: 52px;
+    height: 52px;
+    border: 2px solid #caa5ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    /* font-weight: 500; */
+    color: #222;
+}
+/* 현재 페이지 */
+.btn .page.active {
+    background: #4B0090;
+    border-color: #4B0090;
+    color: #fff;
+}
+/* hover */
+.btn .page:hover:not(.active) {
+    background: #caa5ff;
+}
+/* 화살표 */
+.btn .arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    font-weight: 300;
+    color: #222;
+}
+.btn .arrow:hover {
+    color: #4B0090;
+}
