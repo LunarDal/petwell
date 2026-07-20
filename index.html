@@ -2,468 +2,346 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petwell</title>
+    <title>Resume</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="media/main_media.css">
-    <link rel="stylesheet" href="media/style_media_480.css">
-    <link rel="stylesheet" href="media/style_media_768.css">
-    <link rel="stylesheet" href="media/style_media_1024.css">
-    <link rel="stylesheet" href="media/style_media_1280.css">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            var menu = $('.nav > li');
+            var contents = $('#wrap > div');  
+
+            $('.nav> li').click(function(event){
+                event.preventDefault();
+                
+                var tg = $(this);
+                var i = tg.index();
+                
+                var section = $('#wrap > div').eq(i);
+                var tt = section.offset().top;
+                
+                $('html, body').stop().animate({scrollTop:tt});
+            });
+            //메뉴에 addclass를 적용
+            // $(window).scroll(function(){
+            //     var sct = $(window).scrollTop();
+                
+            //     $('#wrap > div').each(function(){
+            //         var tg = $(this);
+            //         var i = tg.index();
+            //         if(tg.offset().top <= sct){
+            //             $('.nav > li').removeClass('on');
+            //             $('.nav > li').eq(i).addClass('on');
+            //     }
+            // });
+            // $(window).scroll(function(){
+            // var sct = $(window).scrollTop();
+            
+            // contents.each(function(){
+            //     var tg = $(this);
+            //     var i = tg.index();
+            //     if(tg.offset().top <= sct){
+            //         menu.removeClass('on');
+            //         menu.eq(i).addClass('on');
+            //     }
+            // });
+        });
+    </script>
 </head>
 <body>
     <div id="wrap">
-        <div id="header">
-            <div class="header_in">
-                <div class="logo">
-                    <a href="./index.html"><img src="images/logo.png" alt=""></a>
-                </div>
-                <div class="nav">
-                    <ul class="nav_li">
-                        <li>
-                            <a href="./about.html">소개</a>
-                            <ul class="submenu">
-                                <li><a href="./about.html">회사소개</a></li>
-                                <li><a href="">브랜드스토리</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./new.html">신상품</a>
-                            <ul class="submenu">
-                                <li><a href="./new.html">전체상품</a></li>
-                                <li><a href="">시즌상품</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./dog.html">강아지</a>
-                            <ul class="submenu">
-                                <li><a href="./dog.html">사료·간식·영양</a></li>
-                                <li><a href="">산책용품</a></li>
-                                <li><a href="">장난감</a></li>
-                                <li><a href="">미용·패션</a></li>
-                                <li><a href="">위생용품</a></li>
-                                <li><a href="">리빙·이동용품</a></li>
-                                <li><a href="">기타 용품</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./cat.html">고양이</a>
-                            <ul class="submenu">
-                                <li><a href="./cat.html">사료·간식·영양</a></li>
-                                <li><a href="">캣타워·캣휠</a></li>
-                                <li><a href="">장난감</a></li>
-                                <li><a href="">미용·패션</a></li>
-                                <li><a href="">위생용품</a></li>
-                                <li><a href="">리빙·이동용품</a></li>
-                                <li><a href="">기타 용품</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./pet.html">소동물</a>
-                            <ul class="submenu">
-                                <li><a href="./pet.html">앵무새</a></li>
-                                <li><a href="">햄스터</a></li>
-                                <li><a href="">토끼</a></li>
-                                <li><a href="">물고기</a></li>
-                                <li><a href="">기타 동물</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./notice.html">커뮤니티</a>
-                            <ul class="submenu">
-                                <li><a href="./notice.html">공지사항</a></li>
-                                <li><a href="">FAQ</a></li>
-                                <li><a href="">문의하기</a></li>
-                                <li><a href="">멤버십</a></li>
-                                <li><a href="">리뷰블로그</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="h_icon">
-                    <ul class="h_icon_li">
-                        <li><img src="images/h_icon1.png" alt=""></li>
-                        <li><img src="images/h_icon2.png" alt=""></li>
-                        <li><img src="images/h_icon3.png" alt=""></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <!-- 메인 -->
         <div id="main">
-            <div class="slider" id="mainSlider">
-                <div class="slides">
-                    <div class="slide active">
-                        <img src="images/slide1.png" alt="메인 이미지 1">
-                    </div>
-                    <div class="slide">
-                        <img src="images/slide2.png" alt="메인 이미지 2">
-                    </div>
-                    <div class="slide">
-                        <img src="images/slide3.png" alt="메인 이미지 3">
-                    </div>
-                </div>
-                <button class="slider-btn prev" aria-label="이전 슬라이드">‹</button>
-                <button class="slider-btn next" aria-label="다음 슬라이드">›</button>
-                <div class="dots"></div>
+            <div class="in_main">
+              <div class="header">
+                 <h1 class="logo">LMY</h1>
+                 <ul class="nav">
+                     <li><a href="#main">Home</a></li>
+                     <li><a href="#profile">Profile</a></li>
+                     <li><a href="#skill">Skill</a></li>
+                     <li><a href="#project_1">Project1</a></li>
+                     <li><a href="#project_2">Project2</a></li>
+                     <li><a href="#project_3">Project3</a></li>
+                     <!-- <li><a href="#">Project4</a></li> -->
+                     <li><a href="#end">finish</a></li>
+                  </ul>
+              </div> 
+                <h2>
+                    Hello, I'm Lee Moon Young
+                </h2>
+                <p>UX Designer & Front End Developer</p>
             </div>
         </div>
-        <div id="contents">
-            <!-- content1 -->
-            <div class="icon_nav">
-                <div class="icon_nav_in">
-                    <div class="icon_nav_btn">
-                        <a class="on" href="">강아지</a>
-                        <a href="">고양이</a>
-                    </div>
-                    <div class="icon_nav_ul">
-                        <!-- top -->
-                        <ul class="icon_nav_li">
-                            <li class="li_box">
-                                <div class="li_box_icon"></div>
-                                <h4>사료</h4>
-                            </li>
-                            <li class="li_box">
-                                <div class="li_box_icon"></div>
-                                <h4>간식</h4>
-                            </li>
-                            <li class="li_box">
-                                <div class="li_box_icon"></div>
-                                <h4>영양</h4>
-                            </li>
-                            <li class="li_box">
-                                <div class="li_box_icon"></div>
-                                <h4>산책용품</h4>
-                            </li>
-                        </ul>
-                        <!-- bottom -->
-                        <ul class="icon_nav_li">
-                            <li class="li_box">
-                                <div class="li_box_icon"></div>
-                                <h4>장난감</h4>
-                            </li>
-                            <li class="li_box">
-                                <div class="li_box_icon"></div>
-                                <h4>미용 · 패션</h4>
-                            </li>
-                            <li class="li_box">
-                                <div class="li_box_icon"></div>
-                                <h4>위생용품</h4>
-                            </li>
-                            <li class="li_box">
-                                <div class="li_box_icon"></div>
-                                <h4>리빙 · 이동용품</h4>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- content2 -->
-            <div class="new">
-                <div class="title">
-                    <h2>신규 제품</h2>
-                </div>
-                <div class="new_prod_list">
-                    <div class="arrow">
-                        <img src="images/left_Vector.png" alt="">
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>동결 건조 간식</h5>
-                        <p class="price">20,000원</p>
-                        <p class="discount"><span>30%</span>14,000원</p>
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>냥테리어 세트</h5>
-                        <p class="price">180,000원</p>
-                        <p class="discount"><span>60%</span>120,000원</p>
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>덴탈 츄러스</h5>
-                        <p class="price">22,000원</p>
-                        <p class="discount"><span>50%</span>11,000원</p>
-                    </div>
-                    <div class="arrow">
-                        <img src="images/right_Vector.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <!-- content3 -->
-            <div class="dog">
-                <div class="title">
-                    <h2>강아지 인기상품</h2>
-                </div>
-                <div class="prod_list">
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>동결 건조 간식</h5>
-                        <p class="price">20,000원</p>
-                        <p class="discount"><span>30%</span>14,000원</p>
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>덴탈 츄러스</h5>
-                        <p class="price">22,000원</p>
-                        <p class="discount"><span>50%</span>11,000원</p>
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>노즈워크 인형</h5>
-                        <p class="price">26,000원</p>
-                        <p class="discount"><span>50%</span>13,000원</p>
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>강아지 도그푸드 사료</h5>
-                        <p class="price">35,000원</p>
-                        <p class="discount"><span>70%</span>15,000원</p>
-                    </div>
-                </div>
-            </div>
-            <!-- content4 -->
-            <div class="cat">
-                <div class="title">
-                    <h2>고양이 인기상품</h2>
-                </div>
-                <div class="prod_list">
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>연어 습식캔</h5>
-                        <p class="price">9,000원</p>
-                        <p class="discount"><span>45%</span>5,000원</p>
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>고양이 캣푸드 사료</h5>
-                        <p class="price">35,000원</p>
-                        <p class="discount"><span>70%</span>15,000원</p>
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>치킨 츄르</h5>
-                        <p class="price">26,000원</p>
-                        <p class="discount"><span>50%</span>13,000원</p>
-                    </div>
-                    <div class="prod_item">
-                        <div class="item_img"></div>
-                        <h5>안심 스크래쳐</h5>
-                        <p class="price">45,000원</p>
-                        <p class="discount"><span>45%</span>25,000원</p>
-                    </div>
-                </div>
-            </div>
-            <!-- content5 -->
-            <div class="banner">
-                <div class="banner_in">
-                    <div class="b_left"></div>
-                    <div class="b_right">
-                        <div class="b_top"></div>
-                        <div class="b_bot"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- content6 -->
-            <div class="blog">
-                <div class="title">
-                    <h2>리뷰 블로그</h2>
-                </div>
-                <div class="blog_in">
-                    <div class="blog_item">
-                        <div class="blog_img"></div>
-                        <div class="blog_m">
-                            <div class="blog_m_top">
-                                <div class="blog_m_title">
-                                    <h4>제목</h4>
-                                </div>
-                                <div class="blog_m_stars">
-                                    <ul>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog_m_mid">
-                                <p>내용</p>
-                            </div>
-                            <div class="blog_m_bot">
-                                <div class="blog_m_b_l">
-                                    <p>성함</p>
-                                </div>
-                                <div class="blog_m_b_r">
-                                    <p>2026-00-00</p>
-                                </div>
-                            </div>
+        <!-- 소개 -->
+        <div id="profile">
+            <div class="in_profile">
+                <div class="profile_wrap">
+                    <div class="profile_intro">
+                        <div class="profile_image">
+                            <img src="images/avatar.png" alt="프로필 이미지">
                         </div>
-                        <div class="blog_bot">
-                            <div class="blog_bot_img">
-                                <div></div>
-                            </div>
-                            <div class="blog_bot_right">
-                                <div class="blog_b_r_top">
-                                    <p>제품명</p>
-                                </div>
-                                <div class="blog_b_r_bot">
-                                    <p>바로가기 &gt;</p>
-                                </div>
-                            </div>
+                        <div class="profile_text">
+                            <h3>About Me</h3>
+                            <p>
+                                안녕하세요. 사용자 경험을 중요하게 생각하며, 깔끔하고 직관적인 웹 화면을 만드는 프론트엔드 개발자입니다.
+                                웹 표준과 접근성을 바탕으로 반응형 레이아웃을 구현하고, 사용자가 편하게 이용할 수 있는 UI를 만드는 데 집중하고 있습니다.
+                            </p>
+                            <p>
+                                작은 디테일에서도 의미를 찾고, 협업을 통해 더 나은 결과를 만들어가는 것을 좋아합니다.
+                                앞으로도 디자인과 기술을 연결하는 역할을 수행하며, 누구나 이해하기 쉽고 편리한 웹 경험을 만들고 싶습니다.
+                            </p>
                         </div>
                     </div>
-                    <div class="blog_item">
-                        <div class="blog_img"></div>
-                        <div class="blog_m">
-                            <div class="blog_m_top">
-                                <div class="blog_m_title">
-                                    <h4>제목</h4>
-                                </div>
-                                <div class="blog_m_stars">
-                                    <ul>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog_m_mid">
-                                <p>내용</p>
-                            </div>
-                            <div class="blog_m_bot">
-                                <div class="blog_m_b_l">
-                                    <p>성함</p>
-                                </div>
-                                <div class="blog_m_b_r">
-                                    <p>2026-00-00</p>
-                                </div>
-                            </div>
+                    <div class="profile_details">
+                        <div class="detail_box">
+                            <h3>Education</h3>
+                            <p>금곡고등학교 졸업(2013.03~2016.02)</p>
+                            <p>동명대학교 졸업(2016.03~2020.02)</p>
+                            <p>부산대 일반대학원 석사 졸업(2020.03~2022.02)</p>
                         </div>
-                        <div class="blog_bot">
-                            <div class="blog_bot_img">
-                                <div></div>
-                            </div>
-                            <div class="blog_bot_right">
-                                <div class="blog_b_r_top">
-                                    <p>제품명</p>
-                                </div>
-                                <div class="blog_b_r_bot">
-                                    <p>바로가기 &gt;</p>
-                                </div>
-                            </div>
+                        <div class="detail_box">
+                            <h3>Awards</h3>
+                            <p>동명대학교 PRIME사업단 공모전 특선(2016.11)</p>
+                            <p>동명대학교 PRIME사업단 공모전 장려상(2018.11)</p>
+                            <p>부산영상애니메이션포럼 우수상(2019.11)</p>
                         </div>
-                    </div>
-                    <div class="blog_item">
-                        <div class="blog_img"></div>
-                        <div class="blog_m">
-                            <div class="blog_m_top">
-                                <div class="blog_m_title">
-                                    <h4>제목</h4>
-                                </div>
-                                <div class="blog_m_stars">
-                                    <ul>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                        <li><a href=""><img src="images/star_Vector.png" alt=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog_m_mid">
-                                <p>내용</p>
-                            </div>
-                            <div class="blog_m_bot">
-                                <div class="blog_m_b_l">
-                                    <p>성함</p>
-                                </div>
-                                <div class="blog_m_b_r">
-                                    <p>2026-00-00</p>
-                                </div>
-                            </div>
+                        <div class="detail_box">
+                            <h3>Certificates</h3>
+                            <p>GTQ포토샵1급</p>
+                            <p>웹디자인기능사</p>
                         </div>
-                        <div class="blog_bot">
-                            <div class="blog_bot_img">
-                                <div></div>
-                            </div>
-                            <div class="blog_bot_right">
-                                <div class="blog_b_r_top">
-                                    <p>제품명</p>
-                                </div>
-                                <div class="blog_b_r_bot">
-                                    <p>바로가기 &gt;</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="more"><a href="">더보기</a></p>
-            </div>
-            <!-- content7 -->
-            <div class="notice">
-                <div class="notice_in">
-                    <div class="n_movie"></div>
-                    <div class="n_list">
-                        <div class="n_title">
-                            <h4>공지사항</h4>
-                            <p><a href="">더보기</a></p>
-                        </div>
-                        <div class="n_ul">
-                            <ul>
-                                <li><a href="">배송 지연 안내</a><p>2026.04.01</p></li>
-                                <li><a href="">배송 지연 안내</a><p>2026.04.01</p></li>
-                                <li><a href="">배송 지연 안내</a><p>2026.04.01</p></li>
-                                <li><a href="">배송 지연 안내</a><p>2026.04.01</p></li>
-                            </ul>
+                        <div class="detail_box">
+                            <h3>Career</h3>
+                            <p>(주)스튜디오 반달 - 애니메이터 사원(2021.08~2022.05)</p>
+                            <p>콘텐츠코어(주) - 애니메이터 사원(2022.06~2023.12)</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="footer">
-            <div class="f_header">
-                <div class="f_header_in">
-                    <div class="f_nav">
-                        <ul>
-                            <li><a href="">회사소개</a></li>
-                            <li><a href="">이용약관</a></li>
-                            <li><a href="">개인정보처리방침</a></li>
-                            <li><a href="">이용안내</a></li>
-                        </ul>
+        <!-- 스킬 -->
+        <div id="skill">  
+            <div class="in_skill">
+                <div class="profile_summary">
+                    <h3>Resume Summary</h3>
+                    <ul>
+                        <li><span>핵심 역량</span><strong>HTML / CSS / JavaScript / jQuery / React</strong></li>
+                        <li><span>주요 경험</span><strong>웹 퍼블리싱, UI 구현, 인터랙션 개발</strong></li>
+                        <li><span>관심 분야</span><strong>UX 중심의 사용자 친화적 웹 서비스 개발</strong></li>
+                    </ul>
+                </div>
+                <div class="skill_panel">
+                    <div class="skill_header">
+                        <h3>Skill</h3>
+                        <p>웹 표준과 사용자 중심의 인터랙션을 바탕으로, 시각적으로 깔끔하고 기능적으로 안정적인 화면을 구현합니다.</p>
                     </div>
-                    <div class="sns">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
+                    <ul class="skill_list">
+                        <li>
+                            <div>
+                                <div class="in_box in_box01">90%</div>
+                            </div>
+                            <h5>html</h5>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="in_box in_box02">80%</div>
+                            </div>
+                            <h5>css</h5>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="in_box in_box03">50%</div>
+                            </div>
+                            <h5>JS</h5>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="in_box in_box04">60%</div>
+                            </div>
+                            <h5>jquery</h5>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="in_box in_box05">50%</div>
+                            </div>
+                            <h5>react</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill_tabs">
+                    <a href="#project_1" class="skill_tab">Project1</a>
+                    <a href="#project_2" class="skill_tab">Project2</a>
+                    <a href="#project_3" class="skill_tab">Project3</a>
                 </div>
             </div>
-            <div class="f_con">
-                <div class="f_con_in">
-                    <div class="f_con_in_l">
-                        <div class="f_logo">
-                            <a href="./index.html"><img src="images/logo.png" alt=""></a>
-                            <p>대표자 : xxx<br>
-                            사업자등록번호 | 통신판매업 신고<br>
-                            전화 | 팩스 | 주소</p>
-                            <p>Copyright © 펫웰. All Rights Reserved.</p>
+            <script>
+             $(document).ready(function(){
+                var scene01Num = 1;
+
+                $(window).scroll(function(){
+                    var scrollTop = $(document).scrollTop();
+                    if(scrollTop > 1800 && scene01Num == 1) {
+                        scene01Num = 0;
+                        $('#skill .in_box01').stop().delay(0).css({top:'300px'}).animate({top:'30px'},1000);
+                        $('#skill .in_box02').stop().delay(500).css({top:'300px'}).animate({top:'60px'},1000);
+                        $('#skill .in_box03').stop().delay(1000).css({top:'300px'}).animate({top:'150px'},1000);
+                        $('#skill .in_box04').stop().delay(1500).css({top:'300px'}).animate({top:'120px'},1000);
+                        $('#skill .in_box05').stop().delay(2000).css({top:'300px'}).animate({top:'150px'},1000);
+                    }
+                    else if(scrollTop < 1500 && scene01Num == 0){
+                        scene01Num = 1;
+                        $('#skill .in_box01').stop().css({top:'270px'}).animate({top:'300px'},1000);
+                        $('#skill .in_box02').stop().css({top:'240px'}).animate({top:'300px'},1000); 
+                        $('#skill .in_box03').stop().css({top:'150px'}).animate({top:'300px'},1000);
+                        $('#skill .in_box04').stop().css({top:'180px'}).animate({top:'300px'},1000);
+                        $('#skill .in_box05').stop().css({top:'150px'}).animate({top:'300px'},1000);
+                    }
+                });
+             });
+
+            </script>
+        </div>
+        <!-- 프로젝트 -->
+        <div id="project_1">
+            <div class="in_project">
+               <ul class="list">
+                   <li class="output">
+                       <div class="device-preview">
+                           <div class="monitor">
+                               <div class="project-screen"></div>
+                           </div>
+                           <div class="phone">
+                               <div class="project-screen phone-screen"></div>
+                           </div>
+                       </div>
+                   </li>
+                   <li class="account">
+                       <div class="in_account">
+                            <h3>프로젝트명 : Forest 웹사이트</h3>
+                            <p>작업기간 : 2026.03 ~ 2026.04</p>
+                            <p>작업요점 : 웹사이트 디자인 및 개발</p>
+                            <p>사용기술 : HTML, CSS, JavaScript, jQuery</p>
+                            <a href="https://lunardal.github.io/forest/">결과물보기</a>
                         </div>
-                    </div>
-                    <div class="f_con_in_r">
-                        <h5>051-xxx-xxxx</h5>
-                        <p>OPEN 월-금 10:00-18:00<br>
-                        LUNCH 12:00-13:00<br>
-                        CLOSE 토요일 · 일요일 · 공휴일 휴무</p>
-                    </div>
+                   </li>
+               </ul>
+            </div>
+        </div>
+        <div id="project_2">
+            <div class="in_project">
+                <ul class="list">
+                    <li class="output">
+                        <div class="device-preview">
+                            <div class="monitor">
+                                <div class="project-screen"></div>
+                            </div>
+                            <div class="phone">
+                                <div class="project-screen phone-screen"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="account">
+                        <div class="in_account">
+                            <h3>프로젝트명 : SkyValley 웹사이트 리뉴얼</h3>
+                            <p>작업기간 : 2026.04 ~ 2026.05</p>
+                            <p>작업요점 : 웹사이트 리뉴얼 및 기능 개선</p>
+                            <p>사용기술 : HTML, CSS, JavaScript</p>
+                            <a href="https://lunardal.github.io/SkyValley/">결과물보기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="project_3">
+            <div class="in_project">
+                <ul class="list">
+                    <li class="output">
+                        <div class="device-preview">
+                            <div class="monitor">
+                                <div class="project-screen"></div>
+                            </div>
+                            <div class="phone">
+                                <div class="project-screen phone-screen"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="account">
+                        <div class="in_account">
+                            <h3>프로젝트명 : Petwell 웹사이트</h3>
+                            <p>작업기간 : 2026.05 ~ 2026.07</p>
+                            <p>작업요점 : 반응형 구축</p>
+                            <p>사용기술 : HTML, CSS</p>
+                            <a href="https://lunardal.github.io/petwell/">결과물보기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div id="project_4">
+            <div class="in_project">
+                <ul class="list">
+                    <li class="output">
+                        <div><img src="../마스크 그룹 1.png" width="100%" alt=""></div>
+                    </li>
+                    <li class="account">
+                        <h3>프로젝트명</h3>
+                        <p>작업기간</p>
+                        <p>작업요점</p>
+                        <p>사용기술</p>
+                        <a href="">코드보기</a>
+                        <a href="">결과물보기</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- 마무리 -->
+        <div id="end">
+            <div class="in_end">
+                <div class="end_wrap">
+                    <h1>Thank you for visiting my portfolio!</h1>
+                    <ul class="contact_list">
+                        <li>
+                            <span class="contact_icon"><img src="images/envelope-solid-full.svg" alt=""></span>
+                            <a href="mailto:moonlee97@naver.com">moonlee97@naver.com</a>
+                        </li>
+                        <li>
+                            <span class="contact_icon"><img src="images/github.svg" alt=""></span>
+                            <a href="https://github.com/LunarDal" target="_blank" rel="noreferrer">github.com/yourname</a>
+                        </li>
+                        <li>
+                            <span class="contact_icon"><img src="images/Notion.svg" alt=""></span>
+                            <a href="https://app.notion.com/p/WELCOME-TO-MY-NOTION-266403b7764280f7b077df4ee31ae3bd?source=copy_link" target="_blank" rel="noreferrer">notion.so/yourname</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-</div>
-    <script src="js/slider.js"></script>
-    <script src="js/dropdown.js"></script>
+    </div>
+     <!-- 퀵메뉴 -->
+     <div id="q_mn">
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Skill</a></li>
+            <li><a href="#">Project1</a></li>
+            <li><a href="#">Project2</a></li>
+            <li><a href="#">Project3</a></li>
+            <!-- <li><a href="#">Project4</a></li> -->
+            <li><a href="#">finish</a></li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            $(window).scroll(
+            function(){
+            var	windowTop =$(window).scrollTop()+300;
+            $("#q_mn").stop().animate({top:windowTop+"px" },500);
+            //$("#q_mn").stop().animate({속성:"속성값", 속성:"속성값" },1000);	
+                }
+            );
+        });
+    </script>    
 </body>
 </html>
