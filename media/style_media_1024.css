@@ -244,7 +244,7 @@
     .blog_item {
         width: 230px;
         height: 340px;
-        border: 1px solid #10288C;
+        border: 1px solid #E2E2E2;
     }
     .blog_item .blog_img {
         width: 230px;
@@ -299,6 +299,7 @@
     .blog_item .blog_bot {
         width: 230px;
         height: 70px;
+        border-bottom: 1px solid #E2E2E2;
         cursor: pointer;
     }
     .blog_bot .blog_bot_img {

@@ -93,6 +93,11 @@
         </div>
         <div id="main">
             <div class="slider" id="mainSlider">
+                <div class="hero-copy">
+                    <p class="hero-label">Petwell</p>
+                    <h2>반려동물과 함께하는 따뜻한 일상</h2>
+                    <p class="hero-text">사랑하는 친구들이 더 행복하게 지낼 수 있도록, 건강하고 즐거운 선택을 함께합니다.</p>
+                </div>
                 <div class="slides">
                     <div class="slide active">
                         <img src="images/slide1.png" alt="메인 이미지 1">
@@ -113,46 +118,86 @@
             <!-- content1 -->
             <div class="icon_nav">
                 <div class="icon_nav_in">
-                    <div class="icon_nav_btn">
-                        <a class="on" href="">강아지</a>
-                        <a href="">고양이</a>
+                    <div class="icon_nav_btn" role="tablist" aria-label="반려동물 카테고리">
+                        <a class="on" href="#dog-tab" role="tab" aria-selected="true" data-tab="dog">강아지</a>
+                        <a href="#cat-tab" role="tab" aria-selected="false" data-tab="cat">고양이</a>
                     </div>
-                    <div class="icon_nav_ul">
+                    <div class="icon_nav_ul tab_panel active" id="dog-tab" role="tabpanel" data-tab-panel="dog">
                         <!-- top -->
                         <ul class="icon_nav_li">
                             <li class="li_box">
-                                <div class="li_box_icon"></div>
+                                <div class="li_box_icon"><img src="images/dog_food.svg" alt="강아지 사료"></div>
                                 <h4>사료</h4>
                             </li>
                             <li class="li_box">
-                                <div class="li_box_icon"></div>
+                                <div class="li_box_icon"><img src="images/dog_treat.svg" alt="강아지 간식"></div>
                                 <h4>간식</h4>
                             </li>
                             <li class="li_box">
-                                <div class="li_box_icon"></div>
+                                <div class="li_box_icon"><img src="images/dog_nutrition.svg" alt="강아지 영양"></div>
                                 <h4>영양</h4>
                             </li>
                             <li class="li_box">
-                                <div class="li_box_icon"></div>
+                                <div class="li_box_icon"><img src="images/dog_walk.svg" alt="강아지 산책용품"></div>
                                 <h4>산책용품</h4>
                             </li>
                         </ul>
                         <!-- bottom -->
                         <ul class="icon_nav_li">
                             <li class="li_box">
-                                <div class="li_box_icon"></div>
+                                <div class="li_box_icon"><img src="images/dog_toy.svg" alt="강아지 장난감"></div>
                                 <h4>장난감</h4>
                             </li>
                             <li class="li_box">
-                                <div class="li_box_icon"></div>
+                                <div class="li_box_icon"><img src="images/dog_fashion.svg" alt="강아지 미용 패션"></div>
                                 <h4>미용 · 패션</h4>
                             </li>
                             <li class="li_box">
-                                <div class="li_box_icon"></div>
+                                <div class="li_box_icon"><img src="images/dog_hygiene.svg" alt="강아지 위생용품"></div>
                                 <h4>위생용품</h4>
                             </li>
                             <li class="li_box">
-                                <div class="li_box_icon"></div>
+                                <div class="li_box_icon"><img src="images/dog_living.svg" alt="강아지 리빙 이동용품"></div>
+                                <h4>리빙 · 이동용품</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="icon_nav_ul tab_panel" id="cat-tab" role="tabpanel" data-tab-panel="cat">
+                        <!-- top -->
+                        <ul class="icon_nav_li">
+                            <li class="li_box">
+                                <div class="li_box_icon"><img src="images/cat_food.svg" alt="고양이 사료"></div>
+                                <h4>사료</h4>
+                            </li>
+                            <li class="li_box">
+                                <div class="li_box_icon"><img src="images/cat_treat.svg" alt="고양이 간식"></div>
+                                <h4>간식</h4>
+                            </li>
+                            <li class="li_box">
+                                <div class="li_box_icon"><img src="images/cat_nutrition.svg" alt="고양이 영양"></div>
+                                <h4>영양</h4>
+                            </li>
+                            <li class="li_box">
+                                <div class="li_box_icon"><img src="images/cat_tower.svg" alt="고양이 캣타워 캣휠"></div>
+                                <h4>캣타워 · 캣휠</h4>
+                            </li>
+                        </ul>
+                        <!-- bottom -->
+                        <ul class="icon_nav_li">
+                            <li class="li_box">
+                                <div class="li_box_icon"><img src="images/cat_toy.svg" alt="고양이 장난감"></div>
+                                <h4>장난감</h4>
+                            </li>
+                            <li class="li_box">
+                                <div class="li_box_icon"><img src="images/cat_fashion.svg" alt="고양이 미용 패션"></div>
+                                <h4>미용 · 패션</h4>
+                            </li>
+                            <li class="li_box">
+                                <div class="li_box_icon"><img src="images/cat_hygiene.svg" alt="고양이 위생용품"></div>
+                                <h4>위생용품</h4>
+                            </li>
+                            <li class="li_box">
+                                <div class="li_box_icon"><img src="images/cat_living.svg" alt="고양이 리빙 이동용품"></div>
                                 <h4>리빙 · 이동용품</h4>
                             </li>
                         </ul>
@@ -165,58 +210,59 @@
                     <h2>신규 제품</h2>
                 </div>
                 <div class="new_prod_list">
-                    <div class="arrow">
+                    <div class="arrow" data-new-direction="prev" role="button" tabindex="0" aria-label="이전 신규제품">
                         <img src="images/left_Vector.png" alt="">
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/new_product01.jpg" alt="동결 건조 간식"></div>
                         <h5>동결 건조 간식</h5>
                         <p class="price">20,000원</p>
                         <p class="discount"><span>30%</span>14,000원</p>
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/new_product02.jpg" alt="냥테리어 세트"></div>
                         <h5>냥테리어 세트</h5>
                         <p class="price">180,000원</p>
                         <p class="discount"><span>60%</span>120,000원</p>
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/new_product03.jpg" alt="덴탈 츄러스"></div>
                         <h5>덴탈 츄러스</h5>
                         <p class="price">22,000원</p>
                         <p class="discount"><span>50%</span>11,000원</p>
                     </div>
-                    <div class="arrow">
+                    <div class="arrow" data-new-direction="next" role="button" tabindex="0" aria-label="다음 신규제품">
                         <img src="images/right_Vector.png" alt="">
                     </div>
                 </div>
             </div>
             <!-- content3 -->
-            <div class="dog">
+            <div class="pet_popular">
+            <div class="dog tab_panel active" data-tab-panel="dog">
                 <div class="title">
                     <h2>강아지 인기상품</h2>
                 </div>
                 <div class="prod_list">
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/best_product01.jpg" alt="동결 건조 간식"></div>
                         <h5>동결 건조 간식</h5>
                         <p class="price">20,000원</p>
                         <p class="discount"><span>30%</span>14,000원</p>
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/best_product02.jpg" alt="덴탈 츄러스"></div>
                         <h5>덴탈 츄러스</h5>
                         <p class="price">22,000원</p>
                         <p class="discount"><span>50%</span>11,000원</p>
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/best_product03.jpg" alt="노즈워크 인형"></div>
                         <h5>노즈워크 인형</h5>
                         <p class="price">26,000원</p>
                         <p class="discount"><span>50%</span>13,000원</p>
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/best_product04.jpg" alt="강아지 도그푸드 사료"></div>
                         <h5>강아지 도그푸드 사료</h5>
                         <p class="price">35,000원</p>
                         <p class="discount"><span>70%</span>15,000원</p>
@@ -224,44 +270,45 @@
                 </div>
             </div>
             <!-- content4 -->
-            <div class="cat">
+            <div class="cat tab_panel" data-tab-panel="cat">
                 <div class="title">
                     <h2>고양이 인기상품</h2>
                 </div>
                 <div class="prod_list">
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/best_product05.jpg" alt="연어 습식캔"></div>
                         <h5>연어 습식캔</h5>
                         <p class="price">9,000원</p>
                         <p class="discount"><span>45%</span>5,000원</p>
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/best_product06.jpg" alt="고양이 캣푸드 사료"></div>
                         <h5>고양이 캣푸드 사료</h5>
                         <p class="price">35,000원</p>
                         <p class="discount"><span>70%</span>15,000원</p>
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/best_product07.jpg" alt="치킨 츄르"></div>
                         <h5>치킨 츄르</h5>
                         <p class="price">26,000원</p>
                         <p class="discount"><span>50%</span>13,000원</p>
                     </div>
                     <div class="prod_item">
-                        <div class="item_img"></div>
+                        <div class="item_img"><img src="images/best_product08.jpg" alt="안심 스크래쳐"></div>
                         <h5>안심 스크래쳐</h5>
                         <p class="price">45,000원</p>
                         <p class="discount"><span>45%</span>25,000원</p>
                     </div>
                 </div>
             </div>
+            </div>
             <!-- content5 -->
             <div class="banner">
                 <div class="banner_in">
-                    <div class="b_left"></div>
+                    <div class="b_left"><img src="images/slide1.png" alt="반려동물 건강 케어 배너"></div>
                     <div class="b_right">
-                        <div class="b_top"></div>
-                        <div class="b_bot"></div>
+                        <div class="b_top"><img src="images/slide2.png" alt="강아지 추천 상품 배너"></div>
+                        <div class="b_bot"><img src="images/slide3.png" alt="고양이 추천 상품 배너"></div>
                     </div>
                 </div>
             </div>
@@ -272,11 +319,11 @@
                 </div>
                 <div class="blog_in">
                     <div class="blog_item">
-                        <div class="blog_img"></div>
+                        <div class="blog_img"><img src="images/best_product01.jpg" alt="동결 건조 간식 리뷰"></div>
                         <div class="blog_m">
                             <div class="blog_m_top">
                                 <div class="blog_m_title">
-                                    <h4>제목</h4>
+                                    <h4>간식 후기</h4>
                                 </div>
                                 <div class="blog_m_stars">
                                     <ul>
@@ -289,24 +336,24 @@
                                 </div>
                             </div>
                             <div class="blog_m_mid">
-                                <p>내용</p>
+                                <p>입맛 까다로운 아이도 잘 먹는 동결 간식이에요.</p>
                             </div>
                             <div class="blog_m_bot">
                                 <div class="blog_m_b_l">
-                                    <p>성함</p>
+                                    <p>김하나</p>
                                 </div>
                                 <div class="blog_m_b_r">
-                                    <p>2026-00-00</p>
+                                    <p>2026-07-10</p>
                                 </div>
                             </div>
                         </div>
                         <div class="blog_bot">
                             <div class="blog_bot_img">
-                                <div></div>
+                                <div><img src="images/best_product01.jpg" alt="동결 건조 간식"></div>
                             </div>
                             <div class="blog_bot_right">
                                 <div class="blog_b_r_top">
-                                    <p>제품명</p>
+                                    <p>동결 건조 간식</p>
                                 </div>
                                 <div class="blog_b_r_bot">
                                     <p>바로가기 &gt;</p>
@@ -315,11 +362,11 @@
                         </div>
                     </div>
                     <div class="blog_item">
-                        <div class="blog_img"></div>
+                        <div class="blog_img"><img src="images/best_product05.jpg" alt="연어 습식캔 리뷰"></div>
                         <div class="blog_m">
                             <div class="blog_m_top">
                                 <div class="blog_m_title">
-                                    <h4>제목</h4>
+                                    <h4>습식캔 리뷰</h4>
                                 </div>
                                 <div class="blog_m_stars">
                                     <ul>
@@ -332,24 +379,24 @@
                                 </div>
                             </div>
                             <div class="blog_m_mid">
-                                <p>내용</p>
+                                <p>연어 향이 좋아서 물 섭취가 부족한 냥이에게 좋아요.</p>
                             </div>
                             <div class="blog_m_bot">
                                 <div class="blog_m_b_l">
-                                    <p>성함</p>
+                                    <p>박소민</p>
                                 </div>
                                 <div class="blog_m_b_r">
-                                    <p>2026-00-00</p>
+                                    <p>2026-07-08</p>
                                 </div>
                             </div>
                         </div>
                         <div class="blog_bot">
                             <div class="blog_bot_img">
-                                <div></div>
+                                <div><img src="images/best_product05.jpg" alt="연어 습식캔"></div>
                             </div>
                             <div class="blog_bot_right">
                                 <div class="blog_b_r_top">
-                                    <p>제품명</p>
+                                    <p>연어 습식캔</p>
                                 </div>
                                 <div class="blog_b_r_bot">
                                     <p>바로가기 &gt;</p>
@@ -358,11 +405,11 @@
                         </div>
                     </div>
                     <div class="blog_item">
-                        <div class="blog_img"></div>
+                        <div class="blog_img"><img src="images/best_product08.jpg" alt="안심 스크래쳐 리뷰"></div>
                         <div class="blog_m">
                             <div class="blog_m_top">
                                 <div class="blog_m_title">
-                                    <h4>제목</h4>
+                                    <h4>스크래쳐 후기</h4>
                                 </div>
                                 <div class="blog_m_stars">
                                     <ul>
@@ -375,24 +422,24 @@
                                 </div>
                             </div>
                             <div class="blog_m_mid">
-                                <p>내용</p>
+                                <p>흔들림이 적고 넓어서 아이가 오래 머물러요.</p>
                             </div>
                             <div class="blog_m_bot">
                                 <div class="blog_m_b_l">
-                                    <p>성함</p>
+                                    <p>이유진</p>
                                 </div>
                                 <div class="blog_m_b_r">
-                                    <p>2026-00-00</p>
+                                    <p>2026-07-03</p>
                                 </div>
                             </div>
                         </div>
                         <div class="blog_bot">
                             <div class="blog_bot_img">
-                                <div></div>
+                                <div><img src="images/best_product08.jpg" alt="안심 스크래쳐"></div>
                             </div>
                             <div class="blog_bot_right">
                                 <div class="blog_b_r_top">
-                                    <p>제품명</p>
+                                    <p>안심 스크래쳐</p>
                                 </div>
                                 <div class="blog_b_r_bot">
                                     <p>바로가기 &gt;</p>
@@ -406,7 +453,9 @@
             <!-- content7 -->
             <div class="notice">
                 <div class="notice_in">
-                    <div class="n_movie"></div>
+                    <div class="n_movie">
+                        <iframe src="https://www.youtube.com/embed/J---aiyznGQ" title="반려동물 유튜브 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                     <div class="n_list">
                         <div class="n_title">
                             <h4>공지사항</h4>
@@ -436,9 +485,9 @@
                         </ul>
                     </div>
                     <div class="sns">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
+                        <a href="" aria-label="인스타그램"><img src="images/sns_instagram.svg" alt=""></a>
+                        <a href="" aria-label="유튜브"><img src="images/sns_youtube.svg" alt=""></a>
+                        <a href="" aria-label="페이스북"><img src="images/sns_facebook.svg" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -465,5 +514,7 @@
 </div>
     <script src="js/slider.js"></script>
     <script src="js/dropdown.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/new-products.js"></script>
 </body>
 </html>

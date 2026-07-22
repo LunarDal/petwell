@@ -229,7 +229,7 @@
     .blog_item {
         width: 300px;
         height: 470px;
-        border: 1px solid #10288C;
+        border: 1px solid #E2E2E2;
     }
     .blog_item .blog_img {
         width: 300px;
@@ -308,8 +308,8 @@
         width: 300px;
         height: 100px;
         background-color: #fff;
-        border-top: 1px solid #10288C;
-        border-bottom: 1px solid #10288C;
+        border-top: 1px solid #E2E2E2;
+        border-bottom: 1px solid #E2E2E2;
         display: flex;
         cursor: pointer;
     }

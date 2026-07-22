@@ -16,6 +16,43 @@
     max-height: 950px;
     overflow: hidden;
 }
+.hero-copy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    max-width: none;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+.hero-copy .hero-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(75, 0, 144, 0.9);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.hero-copy h2 {
+    margin-bottom: 12px;
+    font-size: 52px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+.hero-copy .hero-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #f7f2ff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
 .slider .slides {
     display: flex;
     /* width: 300%; */
@@ -28,6 +65,7 @@
 }
 .slider .slide img {
     max-width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -70,7 +108,7 @@
 /* contents */
 #contents {
     width: 100%;
-    height: 5850px;
+    height: auto;
     /* 5910 */
     /* background-color: lightgreen; */
 }
@@ -119,6 +157,22 @@
     background-color: #4B0090;
     color: #fff;
 }
+.tab_panel {
+    display: none;
+}
+.tab_panel.active {
+    display: block;
+}
+.icon_nav_ul.tab_panel,
+.dog.tab_panel,
+.cat.tab_panel {
+    display: none;
+}
+.icon_nav_ul.tab_panel.active,
+.dog.tab_panel.active,
+.cat.tab_panel.active {
+    display: block;
+}
 .icon_nav_ul {
     margin: 0 auto;
     width: 100%;
@@ -141,6 +195,14 @@
     height: 160px;
     background-color: #fff;
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon_nav_li .li_box .li_box_icon img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
 }
 .icon_nav_li .li_box h4 {
     font-size: 18px;
@@ -174,6 +236,9 @@
     height: 800px;
     /* background-color: cornflowerblue; */
 }
+.pet_popular {
+    width: 100%;
+}
 /* content4 */
 .cat {
     margin: 0 auto;
@@ -201,6 +266,14 @@
     height: 286px;
     border-radius: 20px;
     background-color: #F5F5F5;
+    overflow: hidden;
+    border: 1px solid #D9D9D9;
+}
+.prod_item .item_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 .prod_item h5 {
     text-align: center;
@@ -243,6 +316,7 @@
     background-color: #CBA1F2;
     border-radius: 20px;
     cursor: pointer;
+    overflow: hidden;
 }
 .b_right {
     width: 627px;
@@ -255,6 +329,7 @@
     background-color: #CBA1F2;
     border-radius: 20px;
     cursor: pointer;
+    overflow: hidden;
 }
 .b_right .b_bot {
     width: 627px;
@@ -263,6 +338,13 @@
     border-radius: 20px;
     margin-top: 20px;
     cursor: pointer;
+    overflow: hidden;
+}
+.banner_in img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 /* content6 */
 .blog {
@@ -282,13 +364,20 @@
 .blog_item {
     width: 380px;
     height: 580px;
-    border: 1px solid #10288C;
+    border: 1px solid #E2E2E2;
 }
 .blog_item .blog_img {
     width: 380px;
     height: 350px;
     background-color: #D9D9D9;
     cursor: pointer;
+    overflow: hidden;
+}
+.blog_item .blog_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 .blog_item .blog_m {
     width: 380px;
@@ -358,8 +447,8 @@
     width: 380px;
     height: 115px;
     background-color: #fff;
-    border-top: 1px solid #10288C;
-    border-bottom: 1px solid #10288C;
+    border-top: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
     display: flex;
     cursor: pointer;
 }
@@ -374,6 +463,13 @@
     margin: 0 auto;
     display: block;
     margin-top: 23px;
+    overflow: hidden;
+}
+.blog_bot .blog_bot_img > div img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 .blog_bot .blog_bot_right {
     width: 280px;
@@ -426,6 +522,13 @@
     width: 610px;
     height: 330px;
     background-color: #D9D9D9;
+    overflow: hidden;
+}
+.n_movie iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
 }
 .n_list {
     width: 610px;
